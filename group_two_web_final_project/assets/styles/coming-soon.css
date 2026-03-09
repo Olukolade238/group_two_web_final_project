@@ -1,0 +1,66 @@
+@import "./base.css";
+
+main,
+.soon-section,
+.coming-soon-logo {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: rgb(0 0 0 / 0.5) url(../media/images/home-hero.jpg) no-repeat center/cover;
+  background-blend-mode: overlay;
+  height: calc(100svh - 110px);
+  color: #fff;
+}
+
+.soon-section {
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.coming-soon-logo {
+  background-color: var(--primary-color);
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  margin-bottom: 5rem;
+}
+
+.coming-soon-logo img {
+  width: 10rem;
+}
+
+input {
+  padding: 1.5rem 2rem;
+  width: 50rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--text-color-light);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+}
+#notify-me {
+  margin-left: 1rem;
+}
+
+#notify-me:hover,
+#notify-me:focus {
+  color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  input {
+    width: 100%;
+  }
+}

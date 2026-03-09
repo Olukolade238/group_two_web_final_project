@@ -1,0 +1,215 @@
+@import "./base.css";
+
+/* About Section */
+.about-hero-section {
+  color: #fff;
+  height: 20rem;
+  background: rgba(0 0 0 / 0.5) url("../media/images/about-hero.jpg") no-repeat center/cover;
+}
+
+.about-hero-section h1 {
+  line-height: 20rem;
+}
+
+/* ABOUT INTRO SECTION */
+.about-intro-section article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22rem;
+}
+
+.about-intro-section article:nth-child(2) {
+  margin-top: 12rem;
+  flex-direction: row-reverse;
+}
+
+.about-intro-text h2 {
+  color: var(--text-color);
+  margin-bottom: 2.4rem;
+}
+
+.about-intro-text p {
+  color: var(--text-color-light);
+}
+
+.about-image {
+  height: 40rem;
+  width: 40rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* VALUES SECTION */
+.values-section {
+  background-color: var(--section-background-color);
+  padding: 5rem 0;
+}
+
+.values-section h2 {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.values-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+
+.values-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.values-list li p {
+  color: var(--text-color-light);
+  margin-top: 2.4rem;
+}
+
+.values-image-container {
+  width: fit-content;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.values-image {
+  border-radius: 50%;
+}
+
+.number {
+  position: absolute;
+  bottom: -48px;
+  left: 72px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  height: 9.6rem;
+  width: 9.6rem;
+  font-weight: bold;
+}
+
+#number-text {
+  margin: 0;
+  font-size: var(--heading-five);
+  line-height: 9.6rem;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.faq-section h2 {
+  text-align: center;
+}
+
+.faq-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+
+  h4 {
+    min-width: 35rem;
+  }
+}
+
+.faq-contents {
+  width: 100%;
+}
+
+.faq-contents {
+  display: grid;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.faq-contents details {
+  position: relative;
+  background-color: var(--section-background-color);
+  padding: 32px 40px;
+  cursor: pointer;
+
+  p {
+    margin-top: 24px;
+    color: var(--text-color-light);
+  }
+}
+
+summary {
+  font-size: var(--heading-five);
+  font-family: var(--primary-font);
+  font-weight: 700;
+  margin-right: 5rem;
+}
+
+.faq-contents details::after {
+  content: url("../media/images/chevron-down.svg");
+  display: block;
+  position: absolute;
+  top: 34px;
+  right: 40px;
+  width: 32px;
+  height: 32px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .about-hero-section h1 {
+    text-align: center;
+  }
+
+  #about-intro-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 6.4rem;
+  }
+
+  .values-list {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+
+  .number {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  #number-text {
+    font-size: var(--heading-six);
+    line-height: 8rem;
+  }
+
+  .faq-part {
+    flex-direction: column;
+
+    h4 {
+      text-align: center;
+      min-width: none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-image {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .values {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faq-contents details {
+    padding: 32px 30px;
+  }
+
+  summary {
+    font-size: var(--heading-seven);
+  }
+}
